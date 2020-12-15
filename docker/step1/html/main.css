@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p');
+
+::selection { background-color: #C3CFE2; }
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+}
+
+.congrats {
+	position: absolute;
+	top: 140px;
+	width: 600px;
+	height: 100px;
+	padding: 20px 10px;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+    right: 0;
+}
+
+h1 {
+	text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 50px;
+	font-family: 'M PLUS 1p', cursive;
+	
+}
