@@ -1,0 +1,18 @@
+各大陸で面積が大きい国ベスト５を表示するクエリを作成してください。
+
+表示項目
+・大陸名
+・国名
+・面積
+
+例
+"Asia"	"China"	9.5729e+06
+"Asia"	"India"	3.287263e+06
+"Asia"	"Kazakstan"	2.7249e+06
+"Asia"	"Saudi Arabia"	2.14969e+06
+"Asia"	"Indonesia"	1.904569e+06
+"Europe"	"Russian Federation"	1.70754e+07
+"Europe"	"Ukraine"	603700
+"Europe"	"France"	551500
+"Europe"	"Spain"	505992
+"Europe"	"Sweden"	449964
