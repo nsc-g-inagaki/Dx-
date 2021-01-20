@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-filename = 'seraku_service.csv'
+filename = 'scraped-seraku-services.csv'
 
 site = requests.get('https://www.seraku.co.jp/service/')
 data = BeautifulSoup(site.text, 'html.parser')
