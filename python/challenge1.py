@@ -52,12 +52,13 @@ def fn7(n):
 
 #8
 def fn8(n, s):
-    arr = s.split()
+    arr = set(s.split())
     print(sorted(arr)[-2])
 
 #9
 def fn9(s):
     import random
-    l = s.split()
-    random.shuffle(l)
-    print(*l)
+    ori = rdm = s.split()
+    while ori == rdm:
+        rdm = random.sample(rdm,len(rdm))
+    print(*rdm)
