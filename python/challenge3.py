@@ -13,13 +13,13 @@ service_div = [n.get_text() for n in data.select('.summary-p__name_jp span')]
 service_name = [n.get_text() for n in data.select('div.summary-p__name_jp')]
 
 # ファイル，1行目(カラム)の作成
-with open(filename, 'w', newline="") as f:
+with open(filename, 'w', newline="", encoding='utf8') as f:
     writer = csv.writer(f)
     writer.writerow(['サービス分野','サービス名'])
 
 i = 0
 for num in service_div:
-    with open(filename, 'a', newline="") as f:
+    with open(filename, 'a', newline="", encoding='utf8') as f:
         writer = csv.writer(f)
         writer.writerow([service_div[i], service_name[i]])
         i += 1
