@@ -1,4 +1,4 @@
-#challenge3.py
+#python 課題３
 
 import requests
 from bs4 import BeautifulSoup
@@ -12,12 +12,8 @@ data = BeautifulSoup(site.text, 'html.parser')
 service_div = [n.get_text() for n in data.select('.summary-p__name_jp span')]
 service_name = [n.get_text() for n in data.select('div.summary-p__name_jp')]
 
-# print(service_name)
-# print(service_div)
-
-
 # ファイル，1行目(カラム)の作成
-with open(filename, 'w') as f:
+with open(filename, 'w', newline="") as f:
     writer = csv.writer(f)
     writer.writerow(['サービス分野','サービス名'])
 
@@ -27,4 +23,3 @@ for num in service_div:
         writer = csv.writer(f)
         writer.writerow([service_div[i], service_name[i]])
         i += 1
-
