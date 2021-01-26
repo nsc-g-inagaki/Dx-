@@ -9,4 +9,4 @@ RUN apk upgrade;
 COPY custom.apache.conf /usr/local/apache2/conf/custom.apache.conf
 
 # コピーした設定をApacheの設定に追加
-RUN echo "include /usr/local/apache2/conf/custom.apache.conf" >> /usr/local/apache2/conf/httpd.conf
+RUN cat /usr/local/apache2/conf/custom.apache.conf >> /usr/local/apache2/conf/httpd.conf
