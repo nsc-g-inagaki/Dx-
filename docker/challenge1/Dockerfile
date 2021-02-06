@@ -219,8 +219,8 @@ RUN set -eux; \
 STOPSIGNAL SIGWINCH
 
 COPY httpd-foreground /usr/local/bin/
-COPY httpd.conf /usr/local/apache2/conf/
 COPY custom.apache.conf /usr/local/apache2/conf/
+RUN echo 'Include conf/custom.apache.conf' >> /usr/local/apache2/conf/httpd.conf
 
 EXPOSE 80
 CMD ["httpd-foreground"]
