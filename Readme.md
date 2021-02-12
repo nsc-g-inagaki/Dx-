@@ -18,16 +18,16 @@
 
 ## 課題に関する質問や問い合わせについて
 
-質問事項などを全員で共有できるようにするため今回は、Issue機能をQ&Aの代わりに使用します。
+質問事項などを全員で共有できるようにするためDiscussions機能でQ&Aを使用します。
 
 
 ### 注意事項
-- 質問等は必ずIssueとして投稿してください。
+- 質問等は必ずQ&Aに投稿してください。
 - 投稿前に同じ内容のものがないかを確認してください。
-- Issueのタイトルは内容がわかりやすい短文にしてください。
+- Q&Aのタイトルは内容がわかりやすい短文にしてください。
 - 質問に対して、答えがわかる場合投稿しても構いません。
 - 課題の答えとみなした投稿は、削除させていただきます。
 
 
-[Issueの作成方法はこちらをご覧ください。](https://docs.github.com/ja/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)
+[Q&Aの投稿方法はこちらをご覧ください。](https://docs.github.com/ja/free-pro-team@latest/discussions/quickstart)
 
