@@ -1,0 +1,83 @@
+//アカウント作成
+useradd user1 -s /sbin/nologin
+//任意のパスワード入力
+passwd user1
+//パスワードは　vagrant
+
+//アカウント作成
+useradd server1 -s /sbin/nologin
+//任意のパスワード入力
+passwd server1
+//パスワードは　vagrant
+
+
+//ディレクトリの書き込み権限
+chmod 777 /var/spool/mail
+
+//mail1ドメイン <受信側>
+mydomain = mail1.test
+
+//mail2ドメイン　<送信側>
+mydomain=mail2.test
+
+//postfix起動
+service postfix start
+//dovecot起動
+service dovecot start
+
+//一括設定
+service postfix start
+service dovecot start
+chmod 777 /var/spool/mail
+
+
+
+--------------telnetでやりとり　<送信編> ---------------------------
+
+//ローカルホストの25番ポートに接続
+telnet localhost 25
+
+//入力
+helo localhost
+
+//入力:送信元アドレス
+mail from: user1@mail-server.test
+
+//入力:宛先アドレス
+rcpt to: user1@mail-server.test
+
+//入力:メールの本文かきますコマンド
+data
+
+//入力:メール本文
+helo postfix
+//入力:本文書き終えましたコマンド
+.
+
+//入力:telnet終了
+quit
+
+-----------------------------------------------------------------
+
+
+
+
+--------------telnetでやりとり　<受信編> ---------------------------
+//ローカルホストの143番ポートに接続
+telnet localhost 143
+
+//入力:user1でログイン
+1 login user1 パスワード
+
+//入力:ホームディレクトリの一覧を見る
+2 list "" *
+
+//入力:INBOXの中身を見る
+3 select INBOX
+
+//入力:1通目のメールを見る。送信時のテストのものが見れる。
+4 fetch 1 body[]
+
+//入力:終了
+5 logout
+-----------------------------------------------------------------

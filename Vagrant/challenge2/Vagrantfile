@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "centos"
+  #config.vm.box = "https://github.com/holms/vagrant-centos7-box/releases/download/7.1.1503.001/CentOS-7.1.1503-x86_64-netboot.box"
+
+
+  config.vm.define :mail1 do |server1|
+    server1.vm.network "private_network",　bridge: "en0: Ethernet", ip: "192.168.102.10", virtualbox__intnet: "mynetwork"
+    #server1.vm.network "private_network", ip: "192.168.102.10", virtualbox__intnet: "mynetwork"
+
+    server1.vm.hostname = 'mail1.test'
+    server1.vm.provision :shell, path: "mail_1/provision_1.sh"
+  end
+
+
+
+  config.vm.define :mail2 do |server2|
+    server2.vm.network "private_network",　bridge: "en0: Ethernet", ip: "192.168.102.11", virtualbox__intnet: "mynetwork"
+    #server2.vm.network "private_network", ip: "192.168.102.11", virtualbox__intnet: "mynetwork"
+
+    server2.vm.hostname = 'mail2.test'
+    server2.vm.network "forwarded_port", guest: 143, host: 10143
+    server2.vm.provision :shell, path: "mail_2/provision_2.sh"
+  end
+
+
+end
