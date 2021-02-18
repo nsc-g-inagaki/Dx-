@@ -1,0 +1,5 @@
+
+FROM httpd:2.4-alpine
+RUN apk update && apk upgrade
+COPY custom.apache.conf /Users/Shared/private/etc/apache2/
+RUN echo 'Include conf/custom.apache.conf' >> /Users/Shared/private/etc/apache2/httpd.conf
