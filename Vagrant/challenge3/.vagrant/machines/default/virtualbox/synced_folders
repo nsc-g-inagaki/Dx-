@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"C:/Users/showt/Documents/Dx-/Vagrant/challenge3","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}

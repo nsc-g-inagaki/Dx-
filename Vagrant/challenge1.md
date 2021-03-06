@@ -10,4 +10,4 @@ WordPressがインストールされているWebサーバー
 
 - Linux OS
 - Apache Webサーバー
-- MySQL 
+- MySQL
