@@ -10,5 +10,3 @@
 
 - Linux OS
 - Squid
-
-
